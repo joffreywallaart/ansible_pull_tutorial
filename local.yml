@@ -3,7 +3,7 @@
   become: true
   become-method: su	
 
-  - tasks:
-      name: Install htop
-      apt:
-        name: htop
+  tasks:
+  - name: Install htop
+    apt:
+      name: htop
