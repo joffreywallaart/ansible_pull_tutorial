@@ -1,7 +1,6 @@
 - hosts: localhost
   connection: local
   become: true
-  become-method: su	
 
   tasks:
   - name: Install htop
