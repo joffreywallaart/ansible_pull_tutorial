@@ -4,6 +4,6 @@
   become-method: su	
 
   - tasks:
-    name: Install htop
-    apt:
-      name: htop
+      name: Install htop
+      apt:
+        name: htop
