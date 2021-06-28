@@ -1,33 +1,18 @@
 ---
-- hosts: localhost
-  connection: local
+- hosts: all
+  tags: all
   become: true
+  pre-tasks:
+    - name: pre-run | update package cache (Debian based)
+      tags: always
+      apt: update_cache=yes
+      changed_when: false
+      when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
 
-  tasks:
-  - name: Install packages
-    package:
-      name: 
-        - htop
-        - tmux
-        - vim-nox
-        - python3-psutil
-
-  - name: copy wallpaper file
-    copy:
-      src: files/wallpaper.png
-      dest: /usr/share/backgrounds/ansible-wallpaper.png
-      owner: root
-      group: root
-
-  - name: set wallpaper
-    become_user: joffrey
-    dconf:
-      key: "/org/gnome/desktop/background/picture.uri"
-      value: "'file:///usr/share/backgrounds/ansible-wallpaper.png'"
-
-  - name: set wallpaper position
-    become_user: joffrey
-    dconf: 
-      key: "/org/gnome/desktop/background/picture-options"
-      value: "'zoom'"
+# run roles
+- hosts: all
+  tags: all
+  become: true
+  roles:
+    - base
 
