@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  tags: all
+  tags: always
   become: true
   pre_tasks:
     - name: pre-run | update package cache (Debian based)
@@ -11,7 +11,7 @@
 
 # run roles
 - hosts: all
-  tags: all
+  tags: base
   become: true
   roles:
     - base
