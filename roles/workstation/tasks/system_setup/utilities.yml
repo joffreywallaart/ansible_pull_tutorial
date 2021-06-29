@@ -3,7 +3,7 @@
 - name: system setup | utilities | flatpak | add flatpak support
   package:
     name: flatpak
-    state: current
+    state: present
 
 - name: system setup | utilities | flatpak | add flathub remote
   flatpak_remote:
