@@ -4,7 +4,7 @@
   ## desktop environments
   
   - include_tasks: desktop_environments/gnome/packages.yml
-    when: gnome is defined and gnome == true
+    #when: gnome is defined and gnome == true
 
   ## install software
   
