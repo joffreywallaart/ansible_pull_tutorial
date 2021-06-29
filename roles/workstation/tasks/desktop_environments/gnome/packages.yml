@@ -1,0 +1,13 @@
+- name: gnome | packages | install flatpak support in gnome software for Debian based hosts
+  package:
+    name:
+      - gnome-software-plugin-flatpak
+  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
+
+
+- name: gnome | packages | install gnome support for for network manager for Debian based hosts
+  package:
+    name:
+      - network-manager-openvpn-gnome
+  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
+

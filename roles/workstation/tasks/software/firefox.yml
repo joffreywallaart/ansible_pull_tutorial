@@ -1,0 +1,4 @@
+- name: software | firefox | install package
+  flatpak:
+    name: org.mozilla.firefox
+    state: present

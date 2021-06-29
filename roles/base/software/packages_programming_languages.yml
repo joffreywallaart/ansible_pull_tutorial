@@ -1,4 +1,19 @@
-- name: system setup | development packages | install packages | Python3
+- name: system setup | programming languages | install packages | C family
+  package:
+    name:
+      - gcc
+      - gcc-multilib
+      - gdb
+      - g++
+
+
+- name: system setup | programming languages | install packages | Fortran
+  package:
+    name:
+      - gfortran
+
+
+- name: system setup | programming languages | install packages | Python3
   package:
     name:
       - python3
@@ -11,3 +26,6 @@
       - python3-scipy
       - python3-sympy
       - python3-xlrd
+      - python3-pandas
+      - pypy
+

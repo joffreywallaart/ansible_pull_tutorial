@@ -1,0 +1,4 @@
+- name: software | bitwarden | install package
+  flatpak:
+    name: flathub com.bitwarden.desktop
+    state: present
