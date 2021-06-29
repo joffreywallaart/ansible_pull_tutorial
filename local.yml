@@ -39,6 +39,6 @@
       tags: always
       apt: 
         autoremove: yes
-        autopurge: yes
+        purge: yes
       when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
 
