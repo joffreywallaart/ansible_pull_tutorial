@@ -1,0 +1,9 @@
+- name: software | thunderbird | install flatpak
+  flatpak:
+    name: org.mozilla.thunderbird
+    state: present
+
+- name: software | thunderbird | remove distro version
+  package:
+    name: thunderbird
+    state: absent
