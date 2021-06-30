@@ -14,3 +14,4 @@
   
   - import_tasks: software/bitwarden.yml
   - import_tasks: software/firefox.yml
+  - import_tasks: software/thunderbird.yml
