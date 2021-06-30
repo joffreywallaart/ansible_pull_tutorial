@@ -1,4 +1,9 @@
-- name: software | firefox | install package
+- name: software | firefox | install flatpak
   flatpak:
     name: org.mozilla.firefox
     state: present
+
+- name: software | firefox | remove distro version
+  package:
+    name: firefox
+    state: absent
